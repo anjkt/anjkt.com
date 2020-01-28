@@ -1562,7 +1562,7 @@ input[type="file"] {
 @media only screen and (min-width: 320px) {
   .card-started .profile .title,
   .content-sidebar .profile .title {
-    font-size: 28px;
+    font-size: 24px;
     color: #323232;
   }
   .card-started .profile .subtitle,
@@ -1571,7 +1571,7 @@ input[type="file"] {
     margin: 0;
     display: inline-block;
     color: #78cc6d;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 20px;
     height: 20px;
     font-weight: 400;
