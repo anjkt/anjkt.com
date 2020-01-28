@@ -1564,4 +1564,15 @@ input[type="file"] {
     font-size: 28px;
     color: #323232;
   }
+  .card-started .profile .subtitle,
+  .card-started .profile .typed-cursor {
+    position: relative;
+    margin: 0;
+    display: inline-block;
+    color: #78cc6d;
+    font-size: 14px;
+    line-height: 20px;
+    height: 20px;
+    font-weight: 400;
+  }
 }
