@@ -822,6 +822,7 @@ input[type="file"] {
 .card-started .profile .social {
   position: relative;
   margin: 16px 0 0 0;
+  bottom: -75px;
 }
 
 /*
@@ -920,7 +921,7 @@ input[type="file"] {
 }
 
 .content:last-child {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 
 .content .title {
