@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: MuseoModerno;
+}
+
+:root {
+  --main-color: #f8f8f8;
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  background-image: url('dark.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.circle {
+  opacity: 0;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  
+}
+
+.circle path {
+  fill: var(--main-color);
+}
+
+.word {
+  fill: var(--main-color);
+  opacity: 0;
+  font-weight: 900;
+}
+
+.dark-logo {
+  stroke: var(--main-color);
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+}
+
+.letter {
+  opacity: 0;
+  font-weight: 900;
+  fill: var(--main-color);
+  font-size: 25px;
+}
