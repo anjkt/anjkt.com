@@ -768,7 +768,7 @@ input[type="file"] {
 }
 
 .card-started .profile.no-photo .title {
-  margin-top: 240px;
+  margin-top: 180px;
 }
 
 .card-started .profile .slide {
@@ -821,8 +821,8 @@ input[type="file"] {
 
 .card-started .profile .social {
   position: relative;
-  margin: 16px 0 0 0;
-  bottom: -55px;
+  margin: 0px 0 0 0;
+  bottom: -45px;
 }
 
 /*
@@ -887,7 +887,7 @@ input[type="file"] {
     height: 600px;
   }
   .card-started .profile.no-photo .slide {
-    height: 55%;
+    height: 57%;
   }
   .card-started .profile.no-photo .title {
     margin-top: 200px;
