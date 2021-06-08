@@ -1,0 +1,632 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>A Productive Day </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="671bca0c-2867-458e-9b96-3aa12593a6b6" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/nasa_tim_peake_spacewalk.jpg" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">💯</span></div><h1 class="page-title">A Productive Day </h1></header><div class="page-body"><p id="680ae1bc-f15b-4e30-b76e-c000866b3309" class=""><mark class="highlight-purple"><strong>Every day is Just like a SpaceEx Rocket. Going up in the space, completing task, coming back and repeat.  
+
+</strong></mark>-Anjani Kumar Thakur</p><h2 id="0a7b54be-ab36-4c21-94a9-8edf42060d75" class=""><mark class="highlight-red_background">#Fueling and Staring Engines.</mark></h2><p id="6ee94242-701f-4398-b770-58466d9ec8c2" class="">Expected time in the clock is between <mark class="highlight-teal">5:00 - 6:00 AM</mark>. The more Early the more Better</p><h3 id="bb9d069c-6284-4c42-bb7b-5a4a471a5311" class="">Getting Enough Sleep</h3><p id="131e18dc-4bc7-4752-a915-419b7e74a55a" class="">Sleeping for at least 6-8 hours. No more no less. One of the behaviours this can be accomplished is going to bed on time with a sense of gratitude in mind. A sense of satisfaction and fulfillness. Peaceful sleep and a peaceful mind will supercharge the body.</p><h3 id="60e81dd4-781a-4247-ba4f-5ced41ba2059" class="">Waking up to the World - Mantras</h3><p id="b587479d-dff5-4d5a-86f1-e3e596b9ef62" class="">Say the below with a slow and peaceful breathe in and out. </p><ul id="ecf7e398-83c8-4b4e-b45e-f94ae9eb732d" class="bulleted-list"><li>I am glad that I woke up and I am alive. </li></ul><ul id="5919a111-761a-4334-ae5c-f1d6d5853042" class="bulleted-list"><li>Today is my last day on this planet. </li></ul><ul id="ac1f8180-8c59-4f71-b957-dcc9402503ea" class="bulleted-list"><li>Thank you god for giving me another day to live. </li></ul><ul id="d817db03-a26e-4602-a32a-5f20df41e0e4" class="bulleted-list"><li>I will accomplish my day to fullest because I wont get this day again. </li></ul><ul id="1f2d6357-039d-4c0c-96cd-2613c1777e9e" class="bulleted-list"><li>I have a short term GOAL and a long term AIM and in the pursurance I won&#x27;t forget that I am a human and I will keep on learning skills.</li></ul><h3 id="35d76efc-ac25-441c-b71c-55574c08753e" class="">Taking a step back - The Run-Up (45 mins)</h3><ul id="1c26abf0-1a51-4afc-911f-b32082de843d" class="bulleted-list"><li>A Liter of lukewarm water cleans up the toxins. </li></ul><ul id="27b635ab-509b-4a95-9abc-22e70bcdb2f9" class="bulleted-list"><li>Using Restroom Being Fresh.</li></ul><ul id="bf64a694-8520-4955-b41e-7e44808ea84b" class="bulleted-list"><li>Clean the Room make the bed.</li></ul><ul id="48167590-c0e5-48b2-8f62-c7a07f1925d8" class="bulleted-list"><li>1 cup of coffee/tea/green tea.</li></ul><h3 id="388a33ed-0416-436e-b8fc-7fc98ce8844b" class="">Excercise and Shower (1.5 hours)</h3><p id="59ce12a0-7fd0-4883-9cb3-6b088fd97a0f" class="">1 hour of intense exercise has below sprints.</p><ul id="7e71922e-2265-4966-9949-441443f4eae8" class="bulleted-list"><li>Pushup - 10/3 - David Goggins Style</li></ul><ul id="0518bf71-1103-43c2-b4d1-790bc0c61aee" class="bulleted-list"><li>Pullups  - 10/3</li></ul><ul id="6bcb2ce8-baba-42bd-a55d-5194f272f30d" class="bulleted-list"><li>Squats - 20</li></ul><ul id="21538231-bb5f-4fc3-97c0-fd7f9b09881b" class="bulleted-list"><li>Running - 2 miles</li></ul><ul id="b7bac8e9-647c-4f13-b5f6-b0a31b4a9c34" class="bulleted-list"><li>Weight Lifting 10kgs</li></ul><p id="b0e4e0ed-9a8a-44bd-9e77-34a0019ad0fe" class="">These might look like baby numbers however consistency will make me a beast.</p><p id="7b2c5c06-95ea-47f8-a5b5-2f94a070bc9c" class=""><strong>Cold Shower - This is super important. At least for 20 mins.</strong></p><h3 id="37b1acd3-6b94-44d7-961c-82611e00e4d6" class="">Breakfast (30 mins)</h3><p id="a3b78125-535a-4885-87a0-482fbd796916" class="">If I can I should prepare it for me or get the available ones. </p><h2 id="bbe87607-b238-4c52-8825-c0ba6ff9aa02" class=""><mark class="highlight-red_background">#Taking Off - I am Recharged and I am set off for the Day </mark></h2><p id="d0dadc41-fd28-45de-addd-302e7711ca82" class="">Expected time in the clock is between <mark class="highlight-teal">8:30 - 9:30</mark>. The more Early the more Better</p><h3 id="457778fb-5bd5-40b5-896c-f18b7813d287" class="">Planning (1 hour)</h3><ul id="74a95fcb-c52c-408e-9ccd-eb5531defa56" class="bulleted-list"><li>Maintain Todos for the work sessions. (3 Sessions - 2 intense 1 light)</li></ul><ul id="82bb0c41-8cb5-4d30-907a-ac02d008bc9f" class="bulleted-list"><li>Each intense session is up of 3 hours and light is of 1.5 hours.</li></ul><ul id="98f2a869-54cd-479d-9ada-67f16d41532f" class="bulleted-list"><li>Schedule Meetings into Light sessions and main task into Intense</li></ul><ul id="8717a6e3-1560-4350-b6cd-4539e0fdf363" class="bulleted-list"><li>Clean the Desk and plan the calander.</li></ul><ul id="68a99ae8-e8fb-4d0b-8ccd-54d6d82691c2" class="bulleted-list"><li><mark class="highlight-pink_background">Check Phone for maximun 10 mins. No disctractions ahead. </mark></li></ul><h3 id="1ae69909-20e0-400a-b489-705ab316f90f" class="">Intense Session - Ist (3 hours)</h3><ul id="0736d41d-6c71-44d4-9dd8-6195604256f1" class="bulleted-list"><li>It consists of 3 hour continious session with breaks only for coffee, water or bathroom.</li></ul><ul id="b76a313d-534b-4073-84a1-a91623af3e66" class="bulleted-list"><li>Focus complete on your target to achieve and no more disctractions. </li></ul><ul id="b624a120-34ab-4d45-b87b-1d116b848559" class="bulleted-list"><li>Phone to be switched off and If not silent.</li></ul><h3 id="f7d36ea3-2875-4570-ba13-65eb8e0f7b12" class="">Lunch and Walk (1 hour)</h3><ul id="e69cd537-ae09-4e39-b713-eb84ade9918d" class="bulleted-list"><li>Enjoy lunch with bare disctraction and Focus on food what you eat.</li></ul><ul id="2ff05548-50d5-4ca5-92cd-905d3a290cf1" class="bulleted-list"><li>Enjoy the time eating and dont watch anything while eating just focus on the food.</li></ul><ul id="a53588dc-a04a-44cc-bb43-fd17d35d61ba" class="bulleted-list"><li>If possible walk around 50 -100 steps in room or on stairs. helps the food to settle down.</li></ul><ul id="b1314b9e-ab6f-4898-ba21-563492aaa06a" class="bulleted-list"><li><mark class="highlight-pink_background">Call friends/ Social media 10 mins. No disctractions Ahead.</mark></li></ul><h3 id="2386dcd0-0fe5-4812-8a70-2f3b74326162" class="">Intense Session - 2nd (3 hours)</h3><ul id="517bf399-1fb2-48c0-b03a-ebc80a54808f" class="bulleted-list"><li>It consists of 3 hour continious session with breaks only for coffee, water or bathroom.</li></ul><ul id="5c08fa91-973c-4b50-934b-f09afa816ad2" class="bulleted-list"><li>Focus complete on your target to achieve and no more disctractions. </li></ul><ul id="da71db0f-4ee9-411a-aef4-b2d73729b8a6" class="bulleted-list"><li>Phone to be switched off and If not silent.</li></ul><h3 id="ec8b0643-1e7d-4398-b6e6-d7550fa0e2df" class="">Evening Tea (1 hour)</h3><ul id="b2ccbda2-ad46-46bd-bc7e-9adfb6c5d7e7" class="bulleted-list"><li>Socialize with Family and Have some snacks.</li></ul><ul id="c2cdec1e-6911-42cb-b5bb-bbf2909109a0" class="bulleted-list"><li>Talk about things and share gratitude among parents</li></ul><ul id="b02c97ae-09ff-42e5-93aa-21ddf0fd547e" class="bulleted-list"><li>Be humble and respect the moment. Its gold. </li></ul><ul id="df83bd79-d974-4f23-a536-a91623e5bbc5" class="bulleted-list"><li>If possible try thanking them for the life they gave you. </li></ul><ul id="28cc2c9e-0a5e-48d8-9d4f-a7a3cd1ce227" class="bulleted-list"><li><mark class="highlight-pink_background">In last 20 mins Call friends/ Social media. No disctractions Ahead.</mark></li></ul><h3 id="58e33fff-35b1-4571-a6a4-872a2d0ba6b5" class="">Light Session (1 hour)</h3><ul id="078a1d2a-fd30-49b6-94b7-112d92f7e5e6" class="bulleted-list"><li>Wrapping up the Intense and slowing down the ress map.</li></ul><ul id="921bbaee-841e-4197-beeb-6ef8e41881c3" class="bulleted-list"><li>Send mails and clear the table. </li></ul><ul id="9ffd0bd4-ef78-4596-b2d4-75fc2aa8c5f6" class="bulleted-list"><li>Try not to leave things on the pending list.</li></ul><ul id="fbdaeb7c-efb1-4cca-8030-324a3a404a87" class="bulleted-list"><li>Do not regret about the day whether you accomplished the goal or not.</li></ul><ul id="84dfec99-c351-4b8a-91f9-1e7f59afb691" class="bulleted-list"><li>Its the fact that you tried, you will succeed sooner or later.</li></ul><h2 id="659a613d-c453-4c54-9e14-883b1b7f3910" class=""><mark class="highlight-red_background">#Controlled descent - I am Slowing down.</mark></h2><p id="a890d5df-49c2-4458-bd5f-d3527720f7ec" class="">Expected time in the clock is between <mark class="highlight-teal">6:30 - 7:30 PM</mark>. The more Early the More Better</p><h3 id="ac3bf746-a8b5-4b13-81c5-6451999a047f" class="">Adding things to life and Personal Development</h3><p id="7e46c632-98fe-42ae-b321-93f8fbf636dd" class=""><mark class="highlight-yellow_background">P.S. : If you are in prep for some test/exams. Use at least 1 intense hours though the Day.</mark></p><ul id="5549fe73-3c26-4e0c-a17b-de8a64f25358" class="bulleted-list"><li>Adding skill is bonus. Do it.</li></ul><ul id="47df15d5-f7d3-40b7-b918-9909fae4509a" class="bulleted-list"><li>Learning things is a bonus. Do it. </li></ul><ul id="4f92e382-af3f-4043-8ea8-679c6013cdbf" class="bulleted-list"><li>Spending time with Family and taking care of them is bonus. Do it.</li></ul><ul id="68e4e092-db0c-43aa-88b7-4925ed8c03a9" class="bulleted-list"><li>Watch learning videos on YT. Not too many but slow and keep going. </li></ul><ul id="388b5cd2-486f-4111-b49b-5be0617a2970" class="bulleted-list"><li>No more wasting time on anything. Stay Focused.</li></ul><ul id="da4de362-9a3c-4ffc-86cf-742c3e49f99b" class="bulleted-list"><li><mark class="highlight-pink_background">Call friends/ Social media 10 mins. No disctractions Ahead.</mark></li></ul><ul id="7ea4d219-b9d0-4611-ad16-d08017eb9718" class="bulleted-list"><li><mark class="highlight-teal_background">Talking to closed one about them and sharing gratitude of talking and discussing. </mark></li></ul><p id="973595e4-bffd-4df4-8ad6-58ca23db50e1" class="">
+<mark class="highlight-red"><strong>Remember Love, Compassion and Gratitude will make you and this world better.</strong></mark></p><h2 id="56f48a4d-2c2b-429e-bc07-13a3269a2db9" class=""><mark class="highlight-red_background">#Touchdown - Hitting the bed</mark></h2><p id="89691882-1cd7-4088-bbaa-7fb6ab9fc1fe" class="">Expected time in the clock should be between <mark class="highlight-teal">10:00 - 11:00 PM</mark>. The more Early the More Better</p><h3 id="c5ef238a-231c-485c-92a8-4a4737a0f970" class="">Thanking and Gratitude</h3><ul id="4580a1be-aaa8-4274-88af-8397b7f641d6" class="bulleted-list"><li>I am still alive.</li></ul><ul id="90f560bf-c962-41ee-943f-af9a2e708346" class="bulleted-list"><li>I didn&#x27;t become angry on anyone and I listened more than I spoke. </li></ul><ul id="d8667f12-c3cc-4515-b798-a972d7b09eb5" class="bulleted-list"><li>Thank you god for giving me another day to live. </li></ul><ul id="703b2bf1-2417-444a-b24f-8b1812f81e8d" class="bulleted-list"><li>I have a short term GOAL and a long term AIM and if I wake up tomorrow I won&#x27;t forget that I am a human and I will keep on learning.</li></ul><h3 id="57bf5554-0644-485b-97c0-a0e21a405d70" class="">Reading is the Mother of Knowledge</h3><p id="2e817deb-486e-4e38-902b-a5a92bcdbc4e" class="">I must read a book everyday. Just 4-6 pages until I sleep and end the day. </p><h2 id="15d34929-9ac1-483e-ae7e-fba47e3a548f" class=""><mark class="highlight-red_background">#Cooldown - Sleep.</mark></h2><p id="2eb8f7cc-2a20-4175-a2b4-8939820a8e4c" class="">Remember your whole day depends on how you sleep today. 
+<strong><mark class="highlight-blue">Getting proper sleep is must for health and sound mental health.</mark></strong></p></div></article></body></html>
